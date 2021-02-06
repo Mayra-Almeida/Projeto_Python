@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora | Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="bg-dark p-5" style="height: 100vh">
+      <div class="container border p-5 bg-black">
+        <h1 class="display-4" style="color: white;">Calc Python API</h1>
+        <hr />
+
+        <form action="/send" method="POST">
+          <input type="text" placeholder="Primeiro número" class="form-control my-3" name="num1">
+          <input type="text" placeholder="Segundo número" class="form-control my-3" name="num2">
+
+          <input type="radio" name="operacao" value="soma" checked>
+          <label for="soma" style="color: white;">Soma</label>
+
+          <input type="radio" name="operacao" id="subt" value="subt">
+          <label for="subt" style="color: white;">Subtraição</label>
+
+          <input type="radio" name="operacao" id="mult" value="mult">
+          <label for="mult" style="color: white;">Multiplicação</label>
+
+          <input type="radio" name="operacao" id="divi" value="divi">
+          <label for="divi" style="color: white;">Divisão</label>
+
+          <input type="radio" name="operacao" id="mod" value="mod">
+          <label for="mod" style="color: white;">Módulo</label>
+
+          <input type="radio" name="operacao" id="pot" value="pot">
+          <label for="pot" style="color: white;">Potênciação</label>
+
+          <div class="mt-4">
+            <button class="btn btn-secondary">Calcular</button>
+            <button class="btn btn-secondary" type="reset">Cancelar</button>
+          </div>
+
+          <input type="text" placeholder="Resultado" class="form-control my-3" disabled value="{{ sum }}">
+        </form>
+    </div>
+  </body>
+</html>
